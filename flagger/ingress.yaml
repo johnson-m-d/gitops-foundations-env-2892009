@@ -15,5 +15,6 @@ spec:
           - pathType: Prefix
             path: "/"
             backend:
-              serviceName: gitops-foundations-service
-              servicePort: 80
+              service: gitops-foundations-service
+              port:
+                number: 80
