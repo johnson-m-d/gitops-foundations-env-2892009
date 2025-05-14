@@ -8,7 +8,7 @@ terraform {
     }
   }
 
-  required_version = "~> 0.14"
+  required_version = "~> 1.11.4"
 }
 
 provider "azurerm" {
@@ -17,7 +17,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "k8s" {
   name     = "${random_pet.prefix.id}-rg"
-  location = "West US 2"
+  location = "Australia East"
 }
 
 resource "azurerm_kubernetes_cluster" "k8s" {
@@ -29,7 +29,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   default_node_pool {
     name            = "default"
     node_count      = 2
-    vm_size         = "Standard_D2_v2"
+    vm_size         = "standard_d2s_v3"
     os_disk_size_gb = 30
   }
 
