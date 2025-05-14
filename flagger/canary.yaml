@@ -1,4 +1,4 @@
-apiVersion: flagger.app/v1
+apiVersion: flagger.app/v2
 kind: Canary
 metadata:
   name: gitops-foundations
