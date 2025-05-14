@@ -12,6 +12,8 @@ spec:
     - host: johnsonmd.australiaeast.cloudapp.azure.com
       http:
         paths:
-          - backend:
+          - pathType: Prefix
+            path: "/"
+            backend:
               serviceName: gitops-foundations-service
               servicePort: 80
